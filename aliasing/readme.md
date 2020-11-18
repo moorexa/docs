@@ -42,7 +42,7 @@ But we would run into an error when trying to call the ```Messaging\Mail``` clas
 
 To overcome this limitation, we utilize the alias manager in registering the ```Messaging\Mail``` class for a general usage from within our application. 
 
-## Register the mail class
+## How to register
 ```php
 // Application Aliases
 /** @var mixed $config **/
