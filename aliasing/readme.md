@@ -42,8 +42,8 @@ But we would run into an error when trying to call the ```Messaging\Mail``` clas
 
 To overcome this limitation, we utilize the alias manager in registering the ```Messaging\Mail``` class for a general usage from within our application. 
 
-## Basic Usage
-Moorexa would include the file to your application only when it is required. Keeping your application free from multiple file inclusion.
+## How to apply
+Moorexa would include or import the registered ```messaging/mail_class.php``` file only when it is needed by you. This would help keep your program neat and well organized.
 
 ```php
 // Application Aliases
