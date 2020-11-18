@@ -1,5 +1,13 @@
 # Aliasing
-File ```src/config/aliases.php```
+Class | Method
+------|-------
+Lightroom\Core\BootCoreEngine|registerAliases()
+
+This Aliase method avaliable in ```src/config/aliases.php``` would help you register classes, traits, interfaces with or without a namespace. 
+
+It instructs the application to include the registered PHP file when a class, interface, trait is called from our application.
+
+This is a basic definition.
 
 ```php
 // Application Aliases
@@ -9,9 +17,7 @@ $config->aliase([
 ]);
 ```
 
-Aliasing would help you register a class, trait, or interface with or without a namespace, and include it only when you request for it. 
-
-Lets look at practical solution. Imagine you created a file called ```mail_class.php``` saved in a folder named ```messaging```. 
+Lets look at practical solution. Imagine you have a file called ```mail_class.php``` saved in a folder named ```messaging```. 
 
 ```php
 // inside messaging/mail_class.php 
@@ -28,15 +34,16 @@ class Mail
 }
 ```
 
-We can both agree that one way to use this file is to include it on every file it's required or use an autoloader [see [https://github.com/moorexa/docs/tree/master/autoloading]].
+We can both agree that one way to use this file is to include it on every PHP file it's required, or have it included through an autoloader (see [https://github.com/moorexa/docs/tree/master/autoloading]).
 
-But we would run into an error when trying to call the MAIL class using our autoloader, because of the following.
+But we would run into an error when trying to call the ```Messaging\Mail``` class using the default autoloader. Why?
 1. The folder was named ```messaging``` instead of ```Messaging```
 2. The file was named ```mail_class.php``` instead of ```Mail.php```
 
-To overcome this limitation, we utilize the alias manager to register our ```Messaging\Mail``` class without worries and for a general usage anywhere in our application. 
+To overcome this limitation, we utilize the alias manager in registering the ```Messaging\Mail``` class for a general usage from within our application. 
 
-See application below;
+## Autoload the file
+Moorexa would autoload the file only when it is required, keeping your application free from multiple file inclusion.
 
 ```php
 // Application Aliases
@@ -45,9 +52,8 @@ $config->aliase([
     Messaging\Mail::class => 'messaging/mail_class.php',
 ]);
 ```
-Moorexa would handle the file inclusion only when it is required, keeping your application fast and light.
 
-Now we can use the ```Messaging\Mail``` class anywhere in our application. See example below.
+Now we can use the ```Messaging\Mail``` class anywhere in our application. See the basic usage below.
 
 ```php
 use Messaging\Mail;
