@@ -3,16 +3,16 @@ Class | Method
 ------|-------
 Lightroom\Core\BootCoreEngine|registerAliases()
 
-This Aliase method avaliable in ```src/config/aliases.php``` would help you register classes, traits, interfaces with or without a namespace. 
+The Alias method avaliable in ```src/config/aliases.php``` would help you register a class, trait, or interface with or without a namespace. 
 
-It instructs the application to include the registered PHP file when a class, interface, trait is called from our application.
+It instructs the application to include the registered PHP file when a class, interface, trait is called anywhere in our application.
 
 This is a basic definition.
 
 ```php
 // Application Aliases
 /** @var mixed $config **/
-$config->aliase([
+$config->alias([
     '<class|interface|trait>' => '<file path>',
 ]);
 ```
@@ -48,7 +48,7 @@ Moorexa would autoload the file only when it is required, keeping your applicati
 ```php
 // Application Aliases
 /** @var mixed $config **/
-$config->aliase([
+$config->alias([
     Messaging\Mail::class => 'messaging/mail_class.php',
 ]);
 ```
