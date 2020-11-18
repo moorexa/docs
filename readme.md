@@ -17,7 +17,7 @@ Here are some TODO's we have for the framework, and we are working to bring them
 
 ## How can you support MOOREXA
 Here are some of the ways you can partner and support MOOREXA
-1. Become our advocate in your city
+1. Become our advocate for your city
 2. Report bugs
 3. Buy any of our branded polo, hoods, face mask, and caps.
 4. Sponsor a meet-up in your city
