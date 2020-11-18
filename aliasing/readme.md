@@ -5,7 +5,7 @@ Lightroom\Core\BootCoreEngine|registerAliases()
 
 The alias method available in ```src/config/aliases.php``` would help you register a class, trait, or interface with or without a namespace. 
 
-It instructs the application to include the registered PHP file when a class, interface, trait is called anywhere in our application.
+It instructs the application to include the registered PHP file when a class, interface, trait is called anywhere from our application.
 
 This is a basic definition.
 
