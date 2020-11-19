@@ -35,7 +35,7 @@ Container::register([
 // we use template handler for this example
 use Lightroom\Templates\TemplateHandler;
 
-// wrap the template handler with a short name
+// wrap the template handler with a reference
 app()->add('template-handler', TemplateHandler::class);
 // so we later access this class via
 // app('template-handler')->someMethod();
