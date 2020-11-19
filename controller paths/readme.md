@@ -15,13 +15,14 @@ Imagine we have a route request like this
 GET http://www.example.com/app/home
 ```
 
+And also a folder called ```external/``` to contain a controller class called ```App```. We can channel requests for ```app``` controller to the directory ```external/```.
+
 Here is how the request is broken down;
 
 method | scheme | host | controller | view
 -------|--------|------|------------|-----
 GET    | http   | www.example.com   | app  | home
 
-And also imagine we have a folder called ```external/``` that contains a controller class called ```App```. We can channel requests for ```app``` controller to the directory ```external/```.
 
 Lets look into the presumed ```external/``` directory.
 ```txt
