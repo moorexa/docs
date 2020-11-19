@@ -1,9 +1,15 @@
 # Containers
-Containers are amazing. You can wrap your class, trait, function, interface in a container and access them on the fly via the ```app()``` global function or via a short name.
+Class | Method
+------|-------
+Lightroom\Adapter\Container | register()
+
+Containers are amazing. You can wrap your class, trait, function, interface in a container and access them on the fly via the ```app()``` global function or via a reference.
 
 ## Registering a container
 1. Using the ```Lightroom\Adapter\Container::register()``` method. Navigate to ```src/services/container.php``` and open it with your favorite IDE e.g PHPSTORM
 ```php
+use Lightroom\Adapter\Container;
+
 // ..code
 Container::register([
    /**
@@ -13,12 +19,12 @@ Container::register([
     * 'mysql' => Lightroom\Database\Drivers\Mysql\Driver::class 
     * 
     * Now, you can access this class via app('mysql'). There are several possibilities here,
-    * Please see Lightroom\Adapter\Container for avaliable methods
+    * Please see Lightroom\Adapter\Container for available methods
     */
 
    // add template handler 
    'screen' => Lightroom\Templates\TemplateHandler::class,
-   // where 'screen' is a short name or reference
+   // where 'screen' is a reference
    // we can access this call via app('screen') or new screen();
    
 ])
@@ -49,7 +55,7 @@ app()->add('function', function(string $name){
     return 'hello ' . $name;
 });
 
-// add anonymus function
+// add anonymous function
 app()->add('myClass', new class(){
     public function sayHello(string $name)
     {
@@ -58,7 +64,7 @@ app()->add('myClass', new class(){
 })
 ```
 
-## Methods avaliable
+## Methods available
 method | parameters | description
 -------|------------|------------
 add()  | ```<reference>, <class|interface|trait|function>``` | Creates a reference to a class, interface, trait, or closure function.
@@ -76,7 +82,7 @@ call() | ```<reference>, <method name>, <arguments>``` | Would attempt to call a
 ## Accessing a container
 1. Using the ```app()``` global function. 
 ```php
-// wrap mysql query with a short name
+// wrap mysql query with a reference
 app()->add('mysql', Lightroom\Database\Drivers\Mysql::class);
 
 // call a method from a class
@@ -104,7 +110,7 @@ $mysql = app('mysql')->instance('args1', 'args2');
 app()->drop('mysql');
 
 ```
-2. Using a short name from any of our examples above.
+2. Using a reference from any of our examples above.
 ```php 
 // lets implement the 'controllerInterface' we registered above.
 class basicClass implements controllerInterface {
