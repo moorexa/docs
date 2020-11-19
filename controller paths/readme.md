@@ -45,7 +45,7 @@ ControllerLoader::setBasePath('app', 'external/');
 ```
 
 ## Extra (How to set the base directory for your controllers)
-Navigate to the file ```src/config/config.php```, open it up. Find ```'controller.base.path'``` and change the default path to your preferred path as demonstrated below;
+Navigate to the ```src/config/config.php``` file and open it up. Find ```'controller.base.path'``` and change the default path to your preferred path as demonstrated below;
 
 ```php
 /*
