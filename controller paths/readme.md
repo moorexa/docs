@@ -44,7 +44,7 @@ use Lightroom\Packager\Moorexa\MVC\Helpers\ControllerLoader;
 ControllerLoader::setBasePath('app', 'external/');
 ```
 
-## Extra (How to set the base directory of your controllers)
+## Extra (How to set the base directory for your controllers)
 Navigate to the file ```src/config/config.php```, open it up. Find ```'controller.base.path'``` and change the default path to your preferred path as demonstrated below;
 
 ```php
