@@ -6,7 +6,7 @@ Lightroom\Adapter\Container | register()
 Containers are amazing. You can wrap your class, trait, function, interface in a container and access them on the fly via the ```app()``` global function or with a reference.
 
 ## Registering a container
-1. Using the ```Container::register()``` method. Navigate to ```src/services/container.php``` and open it with your favorite IDE e.g PHPSTORM
+1. Using the ```Container::register()``` method. Navigate to the ```src/services/container.php``` file and open it with your favorite IDE e.g PHPSTORM
 ```php
 use Lightroom\Adapter\Container;
 
