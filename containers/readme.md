@@ -67,7 +67,7 @@ app()->add('myClass', new class(){
 ## Methods available
 method | parameters | description
 -------|------------|------------
-add()  | ```<reference>, <class|interface|trait|function>``` | Creates a reference to a class, interface, trait, or closure function.
+add()  | ```< reference >, < class|interface|trait|function >``` | Creates a reference to a class, interface, trait, or closure function.
 all()  | void | Would return a list of references from the container registry array.
 drop() | ```<reference>``` | Would remove a reference from the registry array.
 invoke() | ```<arguments>``` | Would invoke a reference closure function.
