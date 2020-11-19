@@ -47,7 +47,7 @@ ControllerLoader::setBasePath('app', 'external/');
 So now, when we have a request for the controller ```app```, we load from the folder named ```external/```
 
 ## Extra (How to set the base directory for your controllers)
-Navigate to the ```src/config/config.php``` file and open it up. Find ```'controller.base.path'``` and change the default path to your preferred path as demonstrated below;
+Navigate to the ```src/config/config.php``` file and open it up. Find ```'controller.base.path'``` and change the default path to your preferred directory path as demonstrated below;
 
 ```php
 /*
