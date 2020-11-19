@@ -15,7 +15,7 @@ Imagine we have a route request like this
 GET http://www.example.com/app/home
 ```
 
-Here is the request breakdown;
+Here is how the request is broken down;
 
 method | scheme | host | controller | view
 -------|--------|------|------------|-----
