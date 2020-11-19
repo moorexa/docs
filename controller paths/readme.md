@@ -10,7 +10,7 @@ In most cases, you may need to incorporate other frameworks with Moorexa, set a 
 We use the ```src/extra/controllers.php``` file to faclitate this operation just before the ```ControllerLoader::serveController()``` method finds the full path to the requesting controller class.
 
 ### Take this illustration.
-Imagine we have a route request like this
+Imagine we have a route request like this;
 ```http
 GET http://www.example.com/app/home
 ```
