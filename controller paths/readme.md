@@ -5,7 +5,7 @@ Lightroom\Packager\Moorexa\MVC\Helpers\ControllerLoader | setBasePath()
 
 All controllers generated through the assist manager by default gets saved in the ```app/``` root directory. 
 
-In most cases, you may need to incorporate other frameworks with Moorexa, set a base directory for a controller outside the ```app/``` root directory. The ```ControllerLoader::setBasePath()``` method can be fully utilized for this operation.
+In most cases, you may need to incorporate other PHP frameworks into Moorexa, set a base directory for a controller outside the ```app/``` root directory. The ```ControllerLoader::setBasePath()``` method can be fully utilized to manage this operation.
 
 We use the ```src/extra/controllers.php``` file to faclitate this operation just before the ```ControllerLoader::serveController()``` method finds the full path to the requesting controller class.
 

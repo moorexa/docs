@@ -3,10 +3,10 @@ Class | Method
 ------|-------
 Lightroom\Adapter\Container | register()
 
-Containers are amazing. You can wrap your class, trait, function, interface in a container and access them on the fly via the ```app()``` global function or with a reference.
+Containers are amazing. You can wrap a class, trait, function, interface with it and then access them via the ```app()``` global function or with a reference.
 
 ## Registering a container
-1. Using the ```Container::register()``` method. Navigate to the ```src/services/container.php``` file and open it with your favorite IDE e.g PHPSTORM
+1. Using the ```Container::register()``` method. Navigate to the ```src/services/container.php``` file and open it with your favorite IDE e.g PHPSTORM, VSCODE
 ```php
 use Lightroom\Adapter\Container;
 
@@ -65,6 +65,8 @@ app()->add('myClass', new class(){
 ```
 
 ## Methods available
+Here is a complete list of methods availiable for your consumption when working with the ```Lightroom\Adapter\Container``` class.
+
 method | parameters | description
 -------|------------|------------
 add()  | ```<reference>, <class,interface,trait,function>``` | Creates a reference to a class, interface, trait, or closure function.
@@ -81,6 +83,9 @@ call() | ```<reference>, <method name>, <arguments>``` | Would attempt to call a
 
 ## Accessing a container
 1. Using the ```app()``` global function. 
+
+This function provides an extra layer when working with containers. In most cases, you may call the ```app()``` function without any parameter, which would signal that you need to use the ```Lightroom\Adapter\Container``` class to access some of the methods listed above. We would have this clear to you in the code demostration below, lets see some examples shall we?
+
 ```php
 // wrap mysql query with a reference
 app()->add('mysql', Lightroom\Database\Drivers\Mysql::class);
@@ -111,6 +116,8 @@ app()->drop('mysql');
 
 ```
 2. Using a reference from any of our examples above.
+
+You can implement a reference as an interface, use a reference as a trait, instantiate a reference as a class. Lets show you how.
 ```php 
 // lets implement the 'controllerInterface' we registered above.
 class basicClass implements controllerInterface {
@@ -125,7 +132,6 @@ class anotherClass
 
 // lets access the 'Template\Handler' class registered above.
 $handler = new Template\Handler(); // now a reference to (Lightroom\Templates\TemplateHandler)
-
 ```
 
 ### Help us make this doc great!
