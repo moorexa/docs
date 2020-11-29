@@ -65,7 +65,7 @@ app()->add('myClass', new class(){
 ```
 
 ## Methods available
-Here is a complete list of methods availiable for your consumption when working with the ```Lightroom\Adapter\Container``` class.
+Here is a complete list of methods available for your consumption when working with the ```Lightroom\Adapter\Container``` class.
 
 method | parameters | description
 -------|------------|------------
