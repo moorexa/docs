@@ -59,10 +59,10 @@ Navigate to the ```src/config/config.php``` file and open it up. Find ```'contro
 'controller.base.path' => '<your directory path>',
 ```
 
-You can also use the ```env()``` function to change the base path during runtime as demonstrated below;
+You can also use the ```get_env()``` function to change the base path during runtime as demonstrated below;
 
 ```php 
-env('bootstrap/controller.base.path', '<your directory path>');
+get_env('bootstrap/controller.base.path', '<your directory path>');
 ```
 
 ### Help us make this doc great!

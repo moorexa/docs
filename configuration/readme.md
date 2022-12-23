@@ -11,7 +11,7 @@ You may need to start with the ```src/config/config.php``` file when the need fo
 ## Bootstrap
 The bootstrap method provides general configuration for your app. It majors in security tokens, url settings, sanitization, input filtering, encryption, and much more. 
 
-Thou, through the ```env()``` function we can create, update both custom or default configurations at run time. But before we dive into that, lets examine the bootstrap array and discuss briefly.
+Thou, through the ```get_env()``` function we can create, update both custom or default configurations at run time. But before we dive into that, lets examine the bootstrap array and discuss briefly.
 
 Config Name | Value | Description
 ------------|-------|-------------
@@ -41,7 +41,7 @@ That's about all. Now we can show you how to read a configuration setting using 
 
 ```php
 // @var string $basePath
-$basePath = env('bootstrap', 'controller.basepath');
+$basePath = get_env('bootstrap', 'controller.basepath');
 
 // now we can check
 if (file_exists($basePath)) echo 'it works!'; // => it works
@@ -51,16 +51,16 @@ One more thing my friend. How about we show you how to update a configuration se
 
 ```php
 // @var string $basePath
-$basePath = env('bootstrap', 'controller.basepath');
+$basePath = get_env('bootstrap', 'controller.basepath');
 
 // print base path before.
 echo $basePath; // => ./app
 
 // change base path
-env('bootstrap/controller.basepath', './somewhere/safe');
+get_env('bootstrap/controller.basepath', './somewhere/safe');
 
 // print base path again
-echo env('bootstrap', 'controller.basepath'); // => ./somewhere/safe
+echo get_env('bootstrap', 'controller.basepath'); // => ./somewhere/safe
 ```
 
 ## Finder
